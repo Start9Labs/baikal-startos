@@ -3,23 +3,17 @@ import { long, short } from './i18n'
 
 export const manifest = setupManifest({
   id: 'baikal',
-  title: 'Baikal',
-  license: 'MIT', // TODO: match the upstream project's license
-  packageRepo: 'https://github.com/REPLACE_ME/baikal-startos', // TODO: set the packaging repo URL
-  upstreamRepo: 'https://github.com/REPLACE_ME/REPLACE_ME', // TODO: set the upstream project URL
-  marketingUrl: 'https://REPLACE_ME', // TODO: set or remove
-  donationUrl: 'https://REPLACE_ME', // TODO: set or remove
+  title: 'Baïkal',
+  license: 'GPL-3.0-only',
+  packageRepo: 'https://github.com/Start9Labs/baikal-startos',
+  upstreamRepo: 'https://github.com/sabre-io/Baikal',
+  marketingUrl: 'https://sabre.io/baikal/',
+  donationUrl: null,
   description: { short, long },
-  // 'example-volume' is an arbitrary id — name volumes whatever suits the
-  // service. It must match the volumeId mounted in startos/main.ts and the
-  // volume backed up in startos/backups.ts.
-  volumes: ['example-volume'],
+  volumes: ['data'],
   images: {
-    // 'example-image' is an arbitrary id — it must match the imageId used in
-    // startos/main.ts. TODO: replace the hello-world image with your service's
-    // image — set dockerTag (or add a Dockerfile) and rename this key.
-    'example-image': {
-      source: { dockerTag: 'ghcr.io/start9labs/hello-world:2.0.0' },
+    baikal: {
+      source: { dockerBuild: {} },
       arch: ['x86_64', 'aarch64'],
     },
   },

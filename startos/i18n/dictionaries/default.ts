@@ -1,11 +1,18 @@
 export const DEFAULT_LANG = 'en_US'
 
 const dict = {
-  // main.ts
-  'Starting Baikal!': 0,
+  'Starting Baïkal': 0,
   'Web Interface': 1,
-  'The web interface is ready': 2,
-  'The web interface is not ready': 3,
+  'Baïkal is ready': 2,
+  'Baïkal web server is unavailable': 3,
+  Administration: 4,
+  'Manage users, calendars, and address books': 5,
+  DAV: 6,
+  'Connect CalDAV and CardDAV clients': 7,
+  Configuration: 8,
+  'Complete Baïkal setup in the Administration interface': 9,
+  'Complete the Baïkal upgrade in the Administration interface': 10,
+  'Baïkal failed its application check': 11,
 } as const
 
 /**

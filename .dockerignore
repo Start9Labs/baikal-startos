@@ -1,2 +1,7 @@
 .git
 .gitmodules
+.startos
+.helix
+node_modules
+javascript
+*.s9pk
